@@ -3,14 +3,14 @@ from PostImage import PostImage
 from camera import MyCamera
 
 def main():
-    file = "/home/pi/Documents/python_project/TetraWatch/data/data.txt"
     timeNow = datetime.datetime.now()
+    # 画像のファイル名になる
     timeStump = timeNow.strftime('%Y%m%d%H%M%S')
 
-    # TODO カメラモジュールの制御を行う
-    camera = MyCamera()
+    # カメラで撮影
+    camera = MyCamera(timeStump)
 
-    # TODO 画像をs3に送信する。
+    # 画像をazureにアップロード
     azure = PostImage(timeStump)
 
 main()
