@@ -29,5 +29,3 @@ class PostImage:
         except Exception as ex:
             print('Exception:')
             print(ex)
-        finally:
-
