@@ -7,7 +7,7 @@ class MyCamera:
         camera=PiCamera()
         camera.start_preview()
 
-        time.sleep(2)
+        # time.sleep(2)
 
         output_path = '/home/pi/Source/TetraWatch/data/'
 

@@ -22,9 +22,12 @@ class PostImage:
             # Upload the created file
             with open(upload_file_path, "rb") as data:
                 blob_client.upload_blob(data)
+            
+            # 送信成功するとローカルの画像ファイルは削除する
+            print('finally: Image delete!')
+            os.remove('/home/pi/Source/TetraWatch/data/' + timeStump + '.jpg')
         except Exception as ex:
             print('Exception:')
             print(ex)
         finally:
-            print('finally: Image delete!')
-            os.remove('/home/pi/Source/TetraWatch/data/' + timeStump + '.jpg')
+
