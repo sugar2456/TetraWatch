@@ -9,8 +9,4 @@ def main():
 
     # カメラで撮影
     camera = MyCamera(timeStump)
-
-    # 画像をazureにアップロード
-    azure = PostImage(timeStump)
-
 main()
